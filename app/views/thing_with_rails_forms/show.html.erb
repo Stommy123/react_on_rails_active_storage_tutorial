@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @thing_with_rails_form.name %>
+</p>
+
+<% if @thing_with_rails_form.image.attached? %>
+  <p>
+    <strong>Image:</strong>
+    <br>
+    <%= image_tag @thing_with_rails_form.image %>
+  </p>
+<% end %>
+
+<%= link_to 'Edit', edit_thing_with_rails_form_path(@thing_with_rails_form) %> |
+<%= link_to 'Back', thing_with_rails_forms_path %>

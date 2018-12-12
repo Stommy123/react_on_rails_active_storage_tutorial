@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<%= react_component 'ShowThingWithReactForm',
+    props: @thing_with_react_form.attributes
+              .merge(
+                image: url_for(@thing_with_react_form.image)
+              )
+%>
+
+<%= link_to 'Edit', edit_thing_with_react_form_path(@thing_with_react_form) %> |
+<%= link_to 'Back', thing_with_react_forms_path %>

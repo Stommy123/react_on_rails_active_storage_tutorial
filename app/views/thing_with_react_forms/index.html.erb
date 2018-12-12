@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Thing With React Forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @thing_with_react_forms.each do |thing_with_react_form| %>
+      <tr>
+        <td><%= thing_with_react_form.name %></td>
+        <td><%= link_to 'Show', thing_with_react_form %></td>
+        <td><%= link_to 'Edit', edit_thing_with_react_form_path(thing_with_react_form) %></td>
+        <td><%= link_to 'Destroy', thing_with_react_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Thing With React Form', new_thing_with_react_form_path %>
